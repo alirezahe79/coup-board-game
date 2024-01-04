@@ -8,4 +8,7 @@ class NormalCoup (models.Model):
     persian_name = models.CharField(max_length=30)
     active_ability = models.TextField(blank=True)
     passive_ability = models.TextField(blank=True)
-    normal_check = models.IntegerField()
+    is_normal = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.card_name
