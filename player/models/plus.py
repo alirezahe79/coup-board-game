@@ -1,5 +1,5 @@
 from django.db import models
-from Base.lobby.models import PlusLobby
+from lobby.models import PlusLobby
 # Create your models here.
 
 

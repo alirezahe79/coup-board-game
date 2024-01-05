@@ -13,7 +13,7 @@ class NormalLobby(models.Model):
     players = models.ManyToManyField(to=user,
                                      validators=[MinValueValidator(2), MaxValueValidator(10)])
     is_plus = models.BooleanField(default=False)
-    end_lobby = models.BooleanField(default=False)
+    is_end = models.BooleanField(default=False)
     life_time = models.DateTimeField(auto_now_add=True)     # trigger on create
 
     """def clean(self):

@@ -1,5 +1,5 @@
 from django.db import models
-from Base.lobby.models import NormalLobby
+from lobby.models import NormalLobby
 # Create your models here.
 
 
