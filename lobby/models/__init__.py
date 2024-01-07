@@ -1,2 +1,2 @@
-from .Normal_Lobby_File import NormalLobby
-from .Plus_Lobby_File import PlusLobby
+from .normal_lobby_file import NormalLobby
+from .plus_lobby_file import PlusLobby
