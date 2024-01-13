@@ -15,6 +15,7 @@ class NormalLobby(models.Model):
     is_plus = models.BooleanField(default=False)
     is_end = models.BooleanField(default=False)
     life_time = models.DateTimeField(auto_now_add=True)     # trigger on create
+    scoreboard = models.TextField(blank=True)
 
     """def clean(self):
         min_player_count = 2

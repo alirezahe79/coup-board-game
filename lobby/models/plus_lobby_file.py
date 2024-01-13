@@ -10,3 +10,4 @@ class PlusLobby(models.Model):
                                      validators=[MinValueValidator(6), MaxValueValidator(10)])
     is_end = models.BooleanField(default=False)
     life_time = models.DateTimeField(auto_now_add=True)     # trigger on create
+    scoreboard = models.TextField(blank=True)
