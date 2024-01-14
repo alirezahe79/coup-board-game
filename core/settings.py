@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'player',
     'lobby',
     'game',
+    'scoreboard',
 ]
 
 MIDDLEWARE = [
