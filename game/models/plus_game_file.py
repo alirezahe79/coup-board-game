@@ -1,11 +1,11 @@
 from django.db import models
-from player.models import PlusPlayer
+from lobby.models import PlusLobby
 import json
 # Create your models here.
 
 
 class PlusGame (models.Model):
-    players = models.ForeignKey(PlusPlayer, on_delete=models.CASCADE)
+    players = models.ForeignKey(PlusLobby, on_delete=models.CASCADE)
     is_start = models.BooleanField(default=True)
     card_storage = models.TextField(blank=True, null=True, default='{}')
     players_gold_storage = models.TextField(blank=True, null=True, default='{}')

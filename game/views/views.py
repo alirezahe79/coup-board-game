@@ -1,10 +1,16 @@
 # from django.shortcuts import render
-
 # Create your views here.
 
 n = 3
-cards = {'commander': f'{n}', 'princess': f'{n}', 'assassin': f'{n}',
-         'nobleman': f'{n}', 'ambassador': f'{n}', 'inspector': f'{n}'}
+cards = {'commander': n, 'princess': n, 'assassin': n,
+         'nobleman': n, 'ambassador': n, 'inspector': n}
+
+
+def normal_game(request):
+    from game.models import NormalGame
+    game = NormalGame(request)      # need alot of change at this level
+    if game.is_start:
+        game.card_storage = cards
 
 
 """def assassin(x):

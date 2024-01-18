@@ -1,11 +1,11 @@
 from django.db import models
-from player.models import NormalPlayer
+from lobby.models import NormalLobby
 import json
 # Create your models here.
 
 
 class NormalGame (models.Model):
-    players = models.ForeignKey(NormalPlayer, on_delete=models.CASCADE)
+    players = models.ForeignKey(NormalLobby, on_delete=models.CASCADE)
     is_start = models.BooleanField(default=True)
     card_storage = models.TextField(blank=True, null=True, default='{}')        # need to send dict as string in db
     players_gold_storage = models.TextField(blank=True, null=True, default='{}')
